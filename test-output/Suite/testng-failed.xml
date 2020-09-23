@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="Academy.listeners"/>
+    <listener class-name="resources.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="validating title in the page(failed)">
+    <classes>
+      <class name="Academy.validateTitle">
+        <methods>
+          <include name="validateAppTitle"/>
+          <include name="initialize"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- Academy.validateTitle -->
+    </classes>
+  </test> <!-- validating title in the page(failed) -->
+  <test thread-count="5" name="validate navigation bar(failed)">
+    <classes>
+      <class name="Academy.validateNavigationBar">
+        <methods>
+          <include name="initialize"/>
+          <include name="validateAppNavigationBar"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- Academy.validateNavigationBar -->
+    </classes>
+  </test> <!-- validate navigation bar(failed) -->
+</suite> <!-- Failed suite [Suite] -->
